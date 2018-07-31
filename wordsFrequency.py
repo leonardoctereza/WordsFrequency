@@ -27,8 +27,8 @@ mostcommon = wordfreqdist.most_common(30)
 plt.figure(figsize=(15,10))
 plt.yticks(range(len(mostcommon)), [val[0] for val in mostcommon])
 plt.barh(range(len(mostcommon)),[val[1] for val in mostcommon], align='center')
-plt.show()
 plt.savefig('mostcommonWords.png')
+plt.show()
 
 with open('WordsFrequency.csv', 'w') as csvfile:
     filewriter = csv.writer(csvfile, delimiter='|')
@@ -45,5 +45,5 @@ with open('WordsFrequency.csv', 'w') as csvfile:
 #plt.clf()
 #plt.imshow(wordcloud, interpolation='bilinear')
 #plt.axis('off')
-#plt.show()
 #plt.savefig('imageCloud.png',dpi = 100)
+#plt.show()
