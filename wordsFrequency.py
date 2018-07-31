@@ -63,7 +63,7 @@ def generate_wordcloud(filtered_words,maxwords=30):
     plt.show()
     
 
-def clean_stopwords():
+def get_stopwords():
     stopwords = []
     file = open('stopwords.txt', 'r',encoding='utf-8')
     for word in file:
@@ -73,7 +73,7 @@ def clean_stopwords():
 
 def deal_csv(file):
     
-    stopwordsBr = clean_stopwords()
+    stopwordsBr = get_stopwords()
     word_list = clean_csv(file)
     
     filtered_words = [word.replace('.','').replace(',', '').replace('\n', '') for word in word_list 
